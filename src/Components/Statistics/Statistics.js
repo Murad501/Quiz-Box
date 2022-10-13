@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import './Statistics.css'
 import {
   LineChart,
   Line,
@@ -13,7 +14,7 @@ const Statistics = () => {
   const { data } = useLoaderData();
   console.log(data);
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center statistics-page">
         <LineChart width={400} height={300} data={data}>
           <XAxis dataKey="name" />
           <YAxis />

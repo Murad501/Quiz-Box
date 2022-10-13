@@ -14,7 +14,7 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <NavLink to="/">Home</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/">Home</NavLink>
           <NavLink to="/topics">Topics</NavLink>
           <NavLink to="/statistics">Statistics</NavLink>
           <NavLink to="/blog">Blog</NavLink>

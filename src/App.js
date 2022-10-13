@@ -23,6 +23,7 @@ const router = createBrowserRouter([
       }, 
       {
         path: 'topics',
+        loader: loadDataFromApi,
         element: <Topics></Topics>
       },
       {
