@@ -6,12 +6,14 @@ import Topics from '../src/Components/Topics/Topics'
 import Statistics from '../src/Components/Statistics/Statistics'
 import Blog from '../src/Components/Blog/Blog'
 import Quizs from '../src/Components/Quizs/Quizs'
+import Page404 from './Components/Page404';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    errorElement: <Page404></Page404>,
     children: [
       {
         path: '/',
@@ -35,8 +37,7 @@ const router = createBrowserRouter([
         loader: async({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.Id}`),
         element: <Quizs></Quizs>
       }
-
-    ]
+    ],
   }
 ])
 
