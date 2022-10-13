@@ -1,6 +1,6 @@
 ### Site Name: Quiz Box
 
-### Live Site: [](https://quiz-app-murad.netlify.app/)
+Live Site: [https://quiz-app-murad.netlify.app/] (https://quiz-app-murad.netlify.app/)
 
 ### Website features
  * When you click on each quiz option, if that option is true, a toast will appear and say the answer is true and if it is false, it will say the answer is wrong.
