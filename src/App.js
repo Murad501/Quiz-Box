@@ -7,6 +7,7 @@ import Blog from '../src/Components/Blog/Blog'
 import Quizs from '../src/Components/Quizs/Quizs'
 import Statistics from '../src/Components/Statistics/Statistics'
 import Page404 from './Components/Page404';
+import { loadDataFromApi } from './Components/loadApiData/loadApiData';
 
 
 const router = createBrowserRouter([
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        loader: async()=> fetch('https://openapi.programming-hero.com/api/quiz'),
+        loader: loadDataFromApi,
         element: <Home></Home>
       }, 
       {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'statistics',
-        loader: async()=> fetch('https://openapi.programming-hero.com/api/quiz'),
+        loader: loadDataFromApi,
         element: <Statistics></Statistics>
       },
       {
