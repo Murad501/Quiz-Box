@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Topic from './Topic/Topic';
+import Topic from '../Topic/Topic';
 
 
 const Home = () => {
