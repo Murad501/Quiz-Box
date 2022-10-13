@@ -7,29 +7,20 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-  ResponsiveContainer,
 } from "recharts";
 
 const Statistics = () => {
   const { data } = useLoaderData();
+  console.log(data);
   return (
-    <div className=" mx-auto mt-20">
-      <ResponsiveContainer width='95%' height='50%'>
-        <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
+    <div className="flex justify-center items-center h-screen">
+        <LineChart width={400} height={300} data={data}>
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line
-            type="monotone"
-            dataKey="total"
-            stroke="#8884d8"
-            activeDot={{ r: 8 }}
-          />
+          <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="total" stroke="#8884d8" />
+          <Tooltip/>
         </LineChart>
-      </ResponsiveContainer>
     </div>
   );
 };
