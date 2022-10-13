@@ -3,9 +3,9 @@ import './App.css';
 import Main from '../src/Components/Layout/Main'
 import Home from '../src/Components/Home/Home'
 import Topics from '../src/Components/Topics/Topics'
-import Statistics from '../src/Components/Statistics/Statistics'
 import Blog from '../src/Components/Blog/Blog'
 import Quizs from '../src/Components/Quizs/Quizs'
+import Statistics from '../src/Components/Statistics/Statistics'
 import Page404 from './Components/Page404';
 
 
@@ -26,6 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'statistics',
+        loader: async()=> fetch('https://openapi.programming-hero.com/api/quiz'),
         element: <Statistics></Statistics>
       },
       {
