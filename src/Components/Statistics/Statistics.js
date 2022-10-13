@@ -14,8 +14,8 @@ import {
 const Statistics = () => {
   const { data } = useLoaderData();
   return (
-    <div className="w-screen mx-auto mt-6">
-      <ResponsiveContainer width="80%" height="80%">
+    <div className=" mx-auto mt-20">
+      <ResponsiveContainer width="95%" height="50%">
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
